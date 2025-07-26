@@ -1,0 +1,28 @@
+/* reset para a margem ficar igual em todos navegadores */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+body {
+  background-color: #131313;/* cor do fundo */
+  color: #f0f0f0; /* cor do texto */
+  font-family: "Roboto", sans-serif; /* fonte do texto */
+}
+
+a {
+  text-decoration: none;/* decoração dos links*/
+  color: #f0f0f0;/* cor dos links  */
+}
+
+header {
+  display: flex;/* para o menu ficar em linha */
+  flex-wrap: row wrap;/* para ter quebra de linha, e o texto não quebrar */
+  justify-content: space-between;/* para o menu ficar espaçado */
+  align-items: center;/* para alinhar os itens no centro */
+  width: 100%;/* para ocupar toda a largura da tela */
+  background-color: #282828;/* fundo do header */
+  padding: 0.5rem 1rem;/* espaçamento interno do header */
+}
