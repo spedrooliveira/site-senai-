@@ -1,28 +1,83 @@
-/* reset para a margem ficar igual em todos navegadores */
-* {
-  margin: 0;
-  padding: 0;
+/* Definir cores tema dark */
+:root,
+:root[data-theme="dark"] {
+  --cor-fundo: #131313; /* cor do fundo */
+  --cor-texto: #a1a1a1; /* cor do texto */
+  --cor-header: #282828; /* cor do header */
+
+  --cor-icone: #fff ; /* cor dos ícones */
+  --cor-link: #ffffff; /* cor dos links */
+  --cor-hover: #4d4d4d; /* cor do hover dos links */
 }
 
+:root[data-theme="light"] {
+  --cor-fundo: #e9e9e9; /* cor do fundo */
+  --cor-texto: #666666; /* cor do texto */
+  --cor-header: #f0f0f0; /* cor do header */
 
+  --cor-icone: #000; /* cor dos ícones */
+  --cor-link: #000000; /* cor dos links */
+  --cor-hover: #e2e2e2; /* cor do hover dos links */
+}
+/* Definir cores tema light */
+
+/* reset para a margem ficar igual em todos navegadores */
+* {
+  margin: 0; /* reset para a margem ficar igual em todos navegadores */
+  padding: 0; /* reset para o padding ficar igual em todos navegadores */
+  box-sizing: border-box; /* para o padding e margin não afetarem a largura e altura dos elementos */
+}
 
 body {
-  background-color: #131313;/* cor do fundo */
-  color: #f0f0f0; /* cor do texto */
-  font-family: "Roboto", sans-serif; /* fonte do texto */
+  background-color: var(--cor-fundo); /* cor do fundo */
+  color: var(--cor-texto); /* cor do texto */
 }
 
 a {
-  text-decoration: none;/* decoração dos links*/
-  color: #f0f0f0;/* cor dos links  */
+  text-decoration: none; /* decoração dos links*/
+  color: var(--cor-link); /* cor dos links  */
+}
+
+ul {
+  list-style: none; /* remove os marcadores das listas */
 }
 
 header {
-  display: flex;/* para o menu ficar em linha */
-  flex-wrap: row wrap;/* para ter quebra de linha, e o texto não quebrar */
-  justify-content: space-between;/* para o menu ficar espaçado */
-  align-items: center;/* para alinhar os itens no centro */
-  width: 100%;/* para ocupar toda a largura da tela */
-  background-color: #282828;/* fundo do header */
-  padding: 0.5rem 1rem;/* espaçamento interno do header */
+  /* id=# */
+  display: flex; /* para o menu ficar em linha */
+  flex-wrap: row wrap; /* para ter quebra de linha, e o texto não quebrar */
+  justify-content: space-between; /* para o menu ficar espaçado */
+  align-items: center; /* para alinhar os itens no centro */
+  width: 100%; /* para ocupar toda a largura da tela */
+  padding: 0.5rem 1rem; /* espaçamento interno do header */
+  /* z-index */
+  /* position */
+  border-bottom: 1px solid var(--cor-hover); /* borda inferior do header */
+  background-color: var(--cor-header); /* fundo do header */
+}
+
+.menu-desktop {
+  /* none */
+}
+
+.menu {
+  display: flex; /* para o menu ficar em linha */
+  gap: 1rem; /* espaçamento entre os itens do menu */
+  list-style: none; /* remove os marcadores das listas */
+}
+
+.menu-link.active .menu-texto,
+.menu-link:hover .menu-texto {
+  color: var(--cor-link); /* cor do link ativo */
+}
+
+.menu-texto {
+  color: var(--cor-texto); /* cor do texto do link */
+  text-transform: uppercase; /* transforma o texto em maiúsculas */
+}
+
+#toggleTheme {
+  cursor: pointer;
+  color: var(--cor-icone);
+  font-size: 1.5rem; /* tamanho do ícone */
 }
