@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const isDark = currentTheme === "dark";
         rootHtml.setAttribute("data-theme", isDark ? "light" : "dark");
         toggleTheme.classList.toggle("bi-sun", !isDark);
-        toggleTheme.classList.toggle("bi-moon", isDark);
+        toggleTheme.classList.toggle("bi-moon-stars", isDark);
     }
 
     if (toggleTheme) {
