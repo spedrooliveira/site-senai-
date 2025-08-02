@@ -22,7 +22,7 @@
 
   --cor-icone: #8f8f8f;
 
-  --cor-link: #8f8f8f;
+  --cor-link: #0b0b0f;
   --cor-hover: #0b0b0f;
 
   --cor-borda: #9a9a9c;
@@ -158,10 +158,8 @@ ul {
   display: inline-block;
   font-size: 1rem; /* tamanho fonte */
   font-weight: 600; /* peso da fonte */
-  padding: .5rem 0;
+  padding: 0.5rem 0;
 }
-
-/* Medidas Responsivas */
 
 @media (min-width: 768px) {
   /* A partir de 768px ate o infinito */
@@ -177,5 +175,9 @@ ul {
 
   .btn-menu-mobile {
     display: none;
+  }
+
+  #home {
+    padding-top: 6rem; /* ajuste conforme a altura do seu header */
   }
 }
