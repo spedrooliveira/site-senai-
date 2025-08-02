@@ -34,9 +34,9 @@ html[data-theme="light"] .logo {
 
 
 * {
-    margin: 0;  
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0;  /* Regula a margin para ficar padrão */
+    padding: 0; /* Regula o padding para ficar padrão */
+    box-sizing: border-box; 
 
 }
 
@@ -81,11 +81,13 @@ ul {
 .menu-texto {
     color: var(--cor-texto);
     text-transform: uppercase;
+    font-size: 0.75rem; /* tamanho fonte */
+    font-weight: 600; /* peso da fonte */
 }
 
 .menu-link.active .menu-texto, 
 .menu-link:hover .menu-texto {
-    color: var(--cor-hover);
+    color: var(--cor-hover);    
 }
 
 .logo {
@@ -97,6 +99,11 @@ ul {
     display: flex;
     align-items: center;
     justify-content: flex-end;
+
+}
+
+#menuMobile {
+    margin-left: 1rem;
 }
 
 
@@ -119,5 +126,7 @@ ul {
     .header-toggle {
         min-width: 30%;
     }
+
+
 
 }
